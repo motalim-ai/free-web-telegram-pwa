@@ -1,0 +1,6 @@
+# Copy to .dev.vars (npm run setup does it for you). Never commit .dev.vars.
+SESSION_SECRET=any-long-random-text
+DEV_LOGIN=1
+BOT_TOKEN=
+ADMIN_IDS=
+WEBHOOK_SECRET=

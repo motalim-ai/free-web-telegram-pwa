@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+
+/* --brand / --on-brand come from the store settings (lib/theme.ts). */
+:root {
+  --brand: #0f5c4d;
+  --on-brand: #ffffff;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-on-brand: var(--on-brand);
+}
+
+@theme {
+  --color-paper: #f5f5f6;
+  --color-card: #ffffff;
+  --color-ink: #1d1f24;
+  --color-muted: #6b7079;
+  --color-line: #e7e7ea;
+  --color-bean: #12805c;
+  --color-sale: #d92d20;
+  --color-danger: #c4320a;
+
+  --font-display: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--color-paper);
+}
+
+.price {
+  font-feature-settings: 'tnum';
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand) 55%, white);
+  outline-offset: 2px;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: var(--color-ink);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 15%, transparent);
+}
+.field::placeholder {
+  color: #a3a7af;
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pop {
+  animation: pop 0.28s ease-out;
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.drawer-in {
+  animation: drawer-in 0.22s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

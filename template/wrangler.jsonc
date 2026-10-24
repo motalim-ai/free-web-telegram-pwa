@@ -1,0 +1,37 @@
+// One Worker serves everything: the React app (static assets), the API, product images and the Telegram bot webhook.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-app",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    // Lets the Worker read the built site (used to add preview tags to product links).
+    "binding": "ASSETS",
+    // Any path that is not a file gets index.html, so React handles /cart, /admin/... itself.
+    "not_found_handling": "single-page-application",
+    // These paths reach the Worker first; everything else is served straight from the built files.
+    "run_worker_first": ["/api/*", "/bot/*", "/img/*", "/p/*", "/manifest.webmanifest"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-app",
+      // Filled in by the AI from `npx wrangler d1 create <name>` before the first deploy.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      // Product images, payment receipts and one-time admin login codes.
+      "binding": "KV",
+      // Filled in by the AI from `npx wrangler kv namespace create KV` before the first deploy.
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "vars": {
+    // The bot's username without @, used for "follow your order on Telegram" links.
+    "BOT_USERNAME": ""
+  },
+  "observability": { "enabled": true }
+}

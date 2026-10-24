@@ -1,0 +1,7 @@
+# The user's own projects, created from template/ by the AI
+projects/
+node_modules
+dist
+.wrangler
+.dev.vars
+.DS_Store

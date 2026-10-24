@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' width='800' height='800'><defs>
+    <radialGradient id='psh' cx='50%' cy='50%' r='50%'><stop offset='0' stop-color='#000' stop-opacity='.28'/><stop offset='1' stop-color='#000' stop-opacity='0'/></radialGradient>
+    <linearGradient id='plt' x1='0' x2='1'><stop offset='0' stop-color='#000' stop-opacity='.28'/><stop offset='.18' stop-color='#fff' stop-opacity='.10'/><stop offset='.32' stop-color='#fff' stop-opacity='.22'/><stop offset='.55' stop-color='#fff' stop-opacity='0'/><stop offset='1' stop-color='#000' stop-opacity='.32'/></linearGradient>
+    <linearGradient id='pbgv' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#fff' stop-opacity='.35'/><stop offset='1' stop-color='#fff' stop-opacity='0'/></linearGradient><radialGradient id='beanhl' cx='35%' cy='30%' r='70%'><stop offset='0' stop-color='#fff' stop-opacity='.35'/><stop offset='.6' stop-color='#fff' stop-opacity='0'/></radialGradient></defs><rect width='800' height='800' fill='#e6e6e2'/><rect width='800' height='800' fill='url(#pbgv)'/>
+<ellipse cx='400' cy='672' rx='150' ry='22' fill='url(#psh)'/>
+<rect x='300' y='330' width='200' height='330' rx='24' fill='#2b2b2e'/><rect x='300' y='330' width='200' height='330' rx='24' fill='url(#plt)'/>
+<rect x='300' y='470' width='200' height='70' fill='#8a5a36'/><rect x='300' y='470' width='200' height='70' fill='url(#plt)'/>
+<rect x='292' y='300' width='216' height='44' rx='14' fill='#3a3a3e'/><rect x='292' y='300' width='216' height='44' rx='14' fill='url(#plt)'/>
+<rect x='390' y='200' width='20' height='104' rx='8' fill='#bfc3c8'/>
+<path d='M400,206 h190' stroke='#bfc3c8' stroke-width='18' stroke-linecap='round'/>
+<circle cx='590' cy='206' r='30' fill='#8a5a36'/><circle cx='590' cy='206' r='30' fill='url(#plt)'/>
+<circle cx='400' cy='206' r='22' fill='#d9dce0'/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='400' height='400'><defs>
+    <radialGradient id='psh' cx='50%' cy='50%' r='50%'><stop offset='0' stop-color='#000' stop-opacity='.28'/><stop offset='1' stop-color='#000' stop-opacity='0'/></radialGradient>
+    <linearGradient id='plt' x1='0' x2='1'><stop offset='0' stop-color='#000' stop-opacity='.28'/><stop offset='.18' stop-color='#fff' stop-opacity='.10'/><stop offset='.32' stop-color='#fff' stop-opacity='.22'/><stop offset='.55' stop-color='#fff' stop-opacity='0'/><stop offset='1' stop-color='#000' stop-opacity='.32'/></linearGradient>
+    <linearGradient id='pbgv' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#fff' stop-opacity='.35'/><stop offset='1' stop-color='#fff' stop-opacity='0'/></linearGradient><radialGradient id='beanhl' cx='35%' cy='30%' r='70%'><stop offset='0' stop-color='#fff' stop-opacity='.35'/><stop offset='.6' stop-color='#fff' stop-opacity='0'/></radialGradient></defs><rect width='400' height='400' fill='#f4dfe0'/>
+<ellipse cx='200' cy='330' rx='130' ry='16' fill='url(#psh)'/>
+<rect x='90' y='170' width='220' height='160' rx='10' fill='#a3202b'/><rect x='90' y='170' width='220' height='160' rx='10' fill='url(#plt)'/>
+<rect x='76' y='140' width='248' height='46' rx='10' fill='#c0392b'/>
+<rect x='186' y='140' width='28' height='190' fill='#f2c94c'/>
+<path d='M200,140 q-70,-70 -80,-10 q10,20 80,10 z M200,140 q70,-70 80,-10 q-10,20 -80,10 z' fill='#f2c94c'/></svg>
